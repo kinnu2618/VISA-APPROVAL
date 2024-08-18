@@ -1,12 +1,4 @@
-from visa.logger import logging
-from visa.exception import visaException
-import sys
+from visa.pipline.training_pipeline import TrainPipeline
 
-
-logging.info("hi")
-
-
-try:
-    a = 2/0
-except Exception as e:
-    raise visaException(e, sys)
+obj = TrainPipeline()
+obj.run_pipeline()
